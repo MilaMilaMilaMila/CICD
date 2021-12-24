@@ -33,6 +33,11 @@ jobs:
       - name: Run a one-line script
         run: python calc.py
 
+      - name: Run a multi-line script
+        run: python calc.py
+          echo Add other actions to build,
+          echo test, and deploy your project.
+
       # commit bytecode file
       - name: Commit files
         run: |
