@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v2
       # Runs a single command using the runners shell
       - name: compile to execute code
-        run: python -m py_compile calc.py > $calc.exe
+        run: python -m py_compile calc.py > calc.exe
       - name: setup git config
         run: |
           git config user.name "GitHub Actions Bot"
@@ -36,11 +36,6 @@ jobs:
         run: python calc.py
           echo Add other actions to build,
           echo test, and deploy your project.
-
-      - name: Upload Artifact
-        with:
-          name: Calculator
-          path: "${{runner.workspace}}"
 
       # commit bytecode file
       - name: Commit files
