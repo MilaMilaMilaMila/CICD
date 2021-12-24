@@ -37,7 +37,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-      # commit bytecode file
+      # commit  bytecode file
       - name: Commit files
         run: |
             git add calc.exe
