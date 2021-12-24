@@ -38,6 +38,7 @@ jobs:
           echo test, and deploy your project.
 
       # commit bytecode file
+      # 1234
       - name: Commit files
         run: |
             git add calc.exe
