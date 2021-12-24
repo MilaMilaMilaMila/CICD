@@ -21,10 +21,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/upload-artifact@v2
       # Runs a single command using the runners shell
       - name: compile to execute code
-        run: python -m py_compile calc.py > calc.exe
+        run: python -m py_compile calc.py > ${{runner.workspace}}/build/calc.exe
       - name: setup git config
         run: |
           git config user.name "GitHub Actions Bot"
@@ -36,9 +36,9 @@ jobs:
         run: python calc.py
           echo Add other actions to build,
           echo test, and deploy your project.
-          
+
       - name: Upload Artifact
-      uses: actions/upload-artifact@v2
+
       with:
         name: Calculator
         path: "${{runner.workspace}}/build/"
