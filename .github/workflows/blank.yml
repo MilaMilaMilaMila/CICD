@@ -37,7 +37,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-      - name: Upload Artifact
+      # - name: Upload Artifact
 
       # with:
       #   name: Calculator
