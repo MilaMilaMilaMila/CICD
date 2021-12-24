@@ -43,9 +43,3 @@ jobs:
             git add calc.exe
             git commit -a -m 'Changes pushed by GitHub Actions' || true
             git push origin main
-      
-      - name: Upload Artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: Calculator
-        path: "${{runner.workspace}}/build/"
