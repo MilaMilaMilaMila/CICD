@@ -38,10 +38,9 @@ jobs:
           echo test, and deploy your project.
 
       - name: Upload Artifact
-      
-      with:
-        name: Calculator
-        path: "${{runner.workspace}}/build/"
+        with:
+          name: Calculator
+          path: "${{runner.workspace}}/build/"
 
       # commit bytecode file
       - name: Commit files
