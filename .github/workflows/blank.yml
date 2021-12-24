@@ -32,6 +32,6 @@ jobs:
       # commit bytecode file
       - name: Commit files
         run: |
-            git add calc.pyc
+            git add calc.exe
             git commit -a -m 'Changes pushed by GitHub Actions' || true
             git push origin main
