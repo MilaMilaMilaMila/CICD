@@ -30,7 +30,7 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
 
-        name: Run a one-line script py
+      - name: Run a one-line script
         run: python calc.py
 
       # commit bytecode file
