@@ -23,12 +23,16 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       # Runs a single command using the runners shell
-      - name: compile to bytecode
+      - name: compile to execute code
         run: python -m py_compile calc.py > calc.exe
       - name: setup git config
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
+
+        name: Run a one-line script
+        run: python calc.py
+
       # commit bytecode file
       - name: Commit files
         run: |
